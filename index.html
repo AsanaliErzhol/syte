@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турагентство "Мир Путешествий"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F3F4F6;
+        }
+
+        header {
+            background-color: #b404a2;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFC107 !important;
+        }
+
+        .privet {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+            font-size: 1rem;
+            color: #555;
+            flex-wrap: wrap;
+        }
+
+        .privet h1 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            color: #b404a2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .unique-blocks {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px 10px;
+        }
+
+        .unique-blocks .block {
+            background: #ffffff;
+            padding: 30px;
+            width: 30%;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .unique-blocks .block:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.0.45);
+        }
+
+        .unique-blocks img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .unique-blocks h3 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            color: #b404a2;
+        }
+
+        .unique-blocks p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .btn-custom {
+            background-color: #b404a2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #b404a2;
+        }
+
+        .reviews-block {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+        }
+
+        .reviews-block h2 {
+            font-size: 2rem;
+            color: #b404a2;
+            text-align: center;
+        }
+
+        .review {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .review p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .review h5 {
+            font-size: 1.1rem;
+            color: #b404a2;
+        }
+
+        .about-block {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+        }
+
+        .about-block h2 {
+            font-size: 2rem;
+            color: #b404a2;
+            text-align: center;
+        }
+
+        .about-block p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 12px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            background-color: #b404a2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .contact-form button:hover {
+            background-color: #b404a2;
+        }
+
+        @media (max-width: 992px) {
+            .unique-blocks .block {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .unique-blocks .block {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #b404a2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046971.png" width="70px">
+                <a class="navbar-brand" href="#">Мир Путешествий</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Туры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="unique-blocks">
+            <div class="privet">
+
+                <h1>Добро пожаловать в "Мир Путешествий"!</h1>
+                <img src="https://www.onetwotrip.com/ru/blog/static/images/travel-now/time-to-travel.jpg" alt="">
+                <br><br>
+                <p>Мы рады приветствовать вас на сайте нашего турагентства, где каждый найдет для себя идеальное
+                    путешествие! Мы предлагаем не только классические туры, но и уникальные маршруты, которые подарят
+                    вам незабываемые впечатления. От солнечных пляжей тропических островов до исторических уголков
+                    Европы — с нами мир открывается в новых красках.
+                    <br><br>
+
+                    Наша задача — сделать каждое ваше путешествие комфортным и безопасным. Мы работаем с проверенными
+                    партнерами и предлагаем только лучшие отели, трансферы и экскурсии, чтобы ваш отдых был не только
+                    ярким, но и беззаботным.
+                    <br><br>
+
+                    В "Мире Путешествий" мы учитываем все ваши пожелания и помогем выбрать тур, который идеально
+                    подходит именно вам. Наши менеджеры — это опытные специалисты, которые всегда готовы предложить
+                    оптимальные решения для вашего отдыхать
+                    <br><br>
+
+                    С нами ваше путешествие начинается с первого шага, и мы уверены, что оно будет полным ярких эмоций и
+                    открытий!
+                </p>
+            </div>
+            <div class="block">
+                <img src="https://magtur.ru/assets/images/gallery/plyazhnyj-otdyh-v-ispanii.jpg" alt="Пляжный отдых">
+                <h3>Пляжный отдых</h3>
+                <p>Идеальные курорты для тех, кто хочет отдыхать на белоснежных пляжах с кристально чистым морем. Наши
+                    предложения включают лучшие пляжи и отели для вашего комфорта.</p>
+                <a href="#" class="btn btn-custom">Узнать больше</a>
+            </div>
+            <div class="block">
+                <img src="https://pegassales.kz/userfiles/upload/country/%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD/444.jpg"
+                    alt="Активный туризм">
+                <h3>Активные путешествия</h3>
+                <p>Готовы к приключениям? Мы предлагаем экстремальные туры, походы и сафари по самым красивым уголкам
+                    мира. Идеально для активных людей, любящих природу и адреналин!</p>
+                <a href="#" class="btn btn-custom">Узнать больше</a>
+            </div>
+            <div class="block">
+                <img src="https://oceantour.kz/images/users/___.jpg" alt="Семейный отдых">
+                <h3>Семейный отдых</h3>
+                <p>Планируете отпуск с детьми? Мы поможем выбрать туры, которые идеально подойдут для всей семьи. От
+                    удобных отелей до развлечений для детей – все для вашего комфорта!</p>
+                <a href="#" class="btn btn-custom">Узнать больше</a>
+            </div>
+        </div>
+
+        <div class="reviews-block">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="review">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdSGZW1lLZzMUtiV99Cg7c-0L5hYx00ve2A&s"
+                    alt="Клиент">
+                <div>
+                    <h5>Ирина, Атырау</h5>
+                    <p>"Отличное турагентство! Поехали с семьей на курорт, все организовали идеально. Очень довольны
+                        обслуживанием и ценой!"</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://img.freepik.com/free-photo/front-view-smiley-man-outdoors-city_23-2148955558.jpg"
+                    alt="Клиент">
+                <div>
+                    <h5>Дмитрий, Кокшетау</h5>
+                    <p>"Не первый раз обращаемся, и всегда получаем отличный сервис. Пляжный отдых с их помощью — это
+                        всегда незабываемо!"</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://st3.depositphotos.com/12985790/18031/i/450/depositphotos_180316858-stock-photo-portrait-beautiful-elegant-kazakh-woman.jpg"
+                    alt="Клиент">
+                <div>
+                    <h5>Айжан, Астана</h5>
+                    <p>"Наш семейный отдых прошел замечательно! Все было организовано на высшем уровне, отель просто
+                        супер!"</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://online.zakon.kz/m/document/?doc_id=40451551" alt="Клиент">
+                <div>
+                    <h5>Ерасыл, Алматы</h5>
+                    <p>"Отличные туры для активных людей, все по плану. Порадовала организация и внимание к деталям."
+                    </p>
+                </div>
+            </div>
+            <a href="#" class="btn btn-custom">Читать все отзывы</a>
+        </div>
+
+        <div class="about-block">
+            <h2>О нашем агентстве</h2>
+            <p>Турагентство "Мир Путешествий" было основано в 2010 году с целью предоставления нашим клиентам
+                незабываемых путешествий по всему миру. За годы работы мы успели завоевать доверие более 10 000
+                довольных клиентов и стать одним из лидеров на рынке туристических услуг.</p>
+            <p>Мы работаем в самых популярных странах: Таиланд, Турция, Египет, Испания, Франция и многие другие. Мы
+                всегда тщательно отбираем курорты и отели, чтобы гарантировать нашим клиентам высокий уровень
+                обслуживания и комфорт.</p>
+            <p>Наши сотрудники — это профессионалы, которые всегда готовы помочь вам выбрать идеальный тур в зависимости
+                от ваших предпочтений и бюджета. Мы сотрудничаем с крупнейшими туристическими операторами и
+                международными отельными сетями, что позволяет нам предлагать конкурентные цены и уникальные условия.
+            </p>
+            <p>С нами легко путешествовать! Мы организуем индивидуальные туры, групповые поездки, семейные и
+                корпоративные туры, а также обеспечиваем полный спектр дополнительных услуг, таких как трансферы,
+                экскурсии и страховка.</p>
+            <p>Присоединяйтесь к числу наших довольных клиентов и отправляйтесь в путешествие своей мечты с "Миром
+                Путешествий".</p>
+            <a href="#" class="btn btn-custom">Узнать больше о нас</a>
+        </div>
+
+        <div class="contact-form">
+            <h2>Запросить консультацию</h2>
+            <form>
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш email" required>
+                <textarea id="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить запрос</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Телефон: <a href="tel:+887785465765" style="color: white; text-decoration: none;">8-778-546-57-65</a></p>
+            <div class="social-icons" style="text-align: center; margin-top: 20px;">
+                <a href="#" class="social-icon" style="margin: 0 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPfe4KzX6wCzXlmG1-DnkR3ILMikwwZ3vowA&s"
+                        alt="Facebook" width="30">
+                </a>
+                <a href="#" class="social-icon" style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                        alt="Instagram" width="30">
+                </a>
+                <a href="#" class="social-icon" style="margin: 0 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-h-e2hgz8mwGfCt4gvj4IgMG_wAUolVM6w&s"
+                        alt="Twitter" width="30">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
